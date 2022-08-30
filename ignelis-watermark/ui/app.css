@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600&family=Orbitron&family=Poppins:wght@600;700&display=swap');
+
+* {
+    color: white;
+    font-family: 'Inter';
+    transition: 0.2s;
+}
+
+body {
+    text-align: right;
+}
+
+#id,
+#p {
+    font-weight: 600;
+}
+
+.ikoneles {
+    position: absolute;
+    top: 30px;
+    right: 110px;
+}
+
+i {
+    color: white;
+    letter-spacing: 1vh;
+}
+
+.wrapper {
+    margin-right: 2vh;
+}
+
+.logo {
+    max-width: 100%;  
+    height: auto;  
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2.5vh;
+    font-weight: 600;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+}
+
+.logo span {
+    color: yellow;
+    font-size: 3vh;
+}
+
+.p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4vh;
+    text-shadow: 1px;
+    position: absolute;
+    top: 70px;
+    right: 110px;
+}
+
+#laikas {
+    color: white;
+    display: block;
+    font-size: 2vh;
+    font-weight: 600;
+    position: absolute;
+    top: 30px;
+    right: 140px;
+    text-shadow: 1px;
+    font-size: 1.3vh;
+}
+
+.men {
+    color: yellow;
+}
+.d {
+    color: yellow;
+}
+.savd {
+    color: yellow;
+}
+.date {
+    display: inline;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    right: 110px;
+    display: inline;
+    font-weight: 600;
+    font-size: 1.3vh;
+    color: white;
+    text-shadow: 1px;
+}
+
+.logo {
+    text-align: right;
+    height: 6vh;
+    right: 1vh;
+    top: 2.5vh;
+}

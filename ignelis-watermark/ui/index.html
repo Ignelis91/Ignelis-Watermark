@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+    <title>Watermark</title>
+</head>
+<body>
+    <div class="wrapper">
+        <span class="p"></style>Prisijunę žaidejai: <span id="zaid">1 </span>&nbsp;&nbsp;  <i class="fa-solid fa-users"></i></span> <img class="logo" src="logo.png" alt="logo">
+        <span class="ikoneles"><i class="fa-solid fa-clock"></i></span>
+        <span id="laikas">08:38</span>
+        <span class="date" ></i><span id="men" >Balandžio</span> <span id="d">6</span>d. <span id="savd" >Šeštadienis </span> <i class="fa-solid fa-calendar-days"></i></span>
+    </div>
+    <script>
+        window.addEventListener('message', function(event) {
+            let data = event.data
+            const month = ["Sausio","Vasario","Kovo","Balandžio","Gegužės","Birželio","Liepos","Rugpjūčio","Rugsėjo","Spalio","Lapkričio","Gruodžio"];
+            const day = ["Sekmadienis","Pirmadienis","Antradienis","Trečiadienis","Ketvirtadienis","Penktadienis","Šeštadienis"];
+            if (data.type === "update") {
+                let d = new Date()
+                document.getElementById('laikas').innerHTML = ("0" + d.getHours()).slice(-2)+":"+("0" + d.getMinutes()).slice(-2);
+                document.getElementById('men').innerHTML = month[d.getMonth()];
+                document.getElementById('d').innerHTML = d.getDate();
+                document.getElementById('savd').innerHTML = day[d.getDay()];
+                document.getElementById('zaid').innerHTML = data.online;
+                document.getElementById('id').innerHTML = data.id;
+            }
+        })
+    </script>
+</body>
+</html>
